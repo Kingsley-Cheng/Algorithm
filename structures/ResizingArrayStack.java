@@ -1,5 +1,4 @@
 package structures;
-
 import java.util.Iterator;
 
 /**
@@ -59,5 +58,17 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
         }
     }
 
+    // 打印内容
+    @Override
+    public String toString() {
+        String result = "ResizingArrayStack(" + N + "):[";
+        for (int i = 0; i < N - 1; i++) {
+            result = result + a[i] + ",";
+        }
+        return result + a[N - 1] + "]";
+    }
 
+    public Item[] getElement() {
+        return a;
+    }
 }

@@ -1,8 +1,10 @@
 package algorithms;
+
 import utils.Stopwatch;
 
-import java.io.*;
-import java.io.DataInputStream.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 /**
  * @description: union-find 问题
@@ -86,7 +88,7 @@ public class UF {
     };
 
     public static void main(String[] args) throws IOException {
-        String fileName = "./data/largeUF.txt";
+        String fileName = "./data/largeUF.txt"; // tinyUF.txt/mediumUF.txt/largeUF.txt
         try {
             BufferedReader br = new BufferedReader(new FileReader(fileName));
             int N = Integer.parseInt(br.readLine());
